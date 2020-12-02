@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Cadastrar Usuarios</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			<p:panel id="login" header="Login" style="width:800px;height:400px" >
+		
+				<br />
+		
+				<span class="ui-float-label"> 
+					<p:inputText id="inputEmail" value="#{loginController.usuario.email}" style="width:400px" required="true" />
+					<p:outputLabel for="@previous" value="E-mail" />
+				</span>
+		
+				<h:message for="inputEmail" />
+		
+				<br />
+		
+				<span class="ui-float-label"> 
+					<p:password  id="inputSenha" value="#{loginController.usuario.senha}" style="width:400px" required="true" />
+					<p:outputLabel for="@previous" value="Senha" />
+				</span>
+		
+				<h:message for="inputSenha" />
+			
+				<br/>
+				<h:commandButton action="#{loginController.logarNoSstema()}" value="Entrar" />
+	
+			</p:panel>	
+		</h:form>
+	</h:body>
+
+</html>

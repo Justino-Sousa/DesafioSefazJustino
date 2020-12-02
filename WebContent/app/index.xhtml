@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Desafio Sefaz</title>
+</h:head>
+<h:body>
+
+	<p:outputLabel>
+		<h1>Desafio Sefaz</h1>
+	</p:outputLabel>
+	
+
+	<h:messages globalOnly="true" />
+	<h:form>
+		<p:breadCrumb style="width:950px;height:20px">
+			<p:menuitem value="Home" outcome="home" />
+			<p:menuitem value="Cadastrar" outcome="adicionar" />
+			<p:menuitem value="Listar" outcome="lista" />	
+			<p:menuitem value="Logout" action="#{loginController.logout()}" />
+		</p:breadCrumb>
+	
+	</h:form>
+	
+	
+
+	
+</h:body>
+</html>

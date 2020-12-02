@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16068293760980" configfile="/desafioSefaz/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1522" id="pf16068294445851" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16068294445869 pf160682962053918 pf160682962053919 pf160682962053920 pf160682962053921 pf160682962053922 pf160682962053923 pf160682962053924" path="/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/index.xhtml" id="pf160682944458617" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16068294445869" path="app/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/adicionar.xhtml" id="pf160682962053925" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf160682962053918" path="app/adicionar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/remover.xhtml" id="pf160682962053926" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf160682962053919" path="app/remover.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/editar.xhtml" id="pf160682962053927" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf160682962053920" path="app/editar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/lista.xhtml" id="pf160682962053928" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf160682962053921" path="app/lista.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/adicionarTelefone.xhtml" id="pf160682962053929" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" inlinks="pf160682962053922" path="app/adicionarTelefone.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/removerTelefone.xhtml" id="pf160682962053930" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" inlinks="pf160682962053923" path="app/removerTelefone.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/editarTelefone.xhtml" id="pf160682962053931" referenceLink="//@navigationRule.0/@navigationCase.7/@toViewId|" inlinks="pf160682962053924" path="app/editarTelefone.xhtml"/>
+  <links id="pf16068294445869" target="pf160682944458617" source="pf16068294445851" outcome="home" redirect="true"/>
+  <links id="pf160682962053918" target="pf160682962053925" source="pf16068294445851" outcome="adicionar" redirect="true"/>
+  <links id="pf160682962053919" target="pf160682962053926" source="pf16068294445851" outcome="remover" redirect="true"/>
+  <links id="pf160682962053920" target="pf160682962053927" source="pf16068294445851" outcome="editar" redirect="true"/>
+  <links id="pf160682962053921" target="pf160682962053928" source="pf16068294445851" outcome="Lista"/>
+  <links id="pf160682962053922" target="pf160682962053929" source="pf16068294445851" outcome="adicionarTelefone"/>
+  <links id="pf160682962053923" target="pf160682962053930" source="pf16068294445851" outcome="removerTelefone"/>
+  <links id="pf160682962053924" target="pf160682962053931" source="pf16068294445851" outcome="editarTelefone"/>
+</pageflow:Pageflow>

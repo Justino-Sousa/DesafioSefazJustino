@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Editar Lembrete</title>
+	<f:metadata>
+		<f:viewParam name="usuario" value="#{usuarioController.usuario.id}" />
+		<f:event type="preRenderView" listener="#{usuarioController.selecionar()}" />
+	</f:metadata>
+</h:head>
+
+<h:body>
+
+	<h:messages /><h:messages />
+		
+		<h:form rendered="#{usuarioController.usuario.id != 0}">
+		<p:panel id="cadastroUsuario" header="Cadastro de Usuário" style="width:800px;height:600px" >
+	
+
+			<br />
+			<span class="ui-float-label"> <p:inputText id="inputNome"
+					value="#{usuarioController.usuario.nome}" required="true">
+					<f:validateLength minimum="3" maximum="255" />
+				</p:inputText> <p:outputLabel for="@previous" value="Nome" />
+			</span>
+			<h:message for="nome" />
+
+			<br />
+
+			<span class="ui-float-label"> <p:inputText id="inputEmail"
+					value="#{usuarioController.usuario.email}" style="width:400px"
+					required="true">
+					<f:validateLength minimum="3" maximum="255" />
+				</p:inputText> <p:outputLabel for="@previous" value="Email" />
+			</span>
+			<h:message for="email" />
+
+			<br />
+
+			<span class="ui-float-label"> <p:password id="inputSenha"
+					value="#{usuarioController.usuario.senha}" required="true"></p:password>
+				<p:outputLabel for="@previous" value="Senha" />
+			</span>
+			<h:message for="senha" />
+
+			<br />
+
+
+	</p:panel>
+	<p:commandButton value="salvar" id="salvar" action="#{usuarioController.atualizar()}"  style="margin-right:20px" icon="pi pi-save" />
+	<p:linkButton outcome="home" value="voltar" style="margin-right:20px"></p:linkButton>
+		
+	</h:form>
+
+</h:body>
+</html>

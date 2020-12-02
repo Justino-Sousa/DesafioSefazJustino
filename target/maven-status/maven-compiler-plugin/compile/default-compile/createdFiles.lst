@@ -1,0 +1,4 @@
+br\com\sefaz\web\controller\JpaResourceBean.class
+br\com\sefaz\web\model\Usuario.class
+br\com\sefaz\web\controller\UsuarioController.class
+br\com\sefaz\web\dao\UsuarioDao.class

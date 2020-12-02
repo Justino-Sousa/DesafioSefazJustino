@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#*" PATH="/*" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#*:0" NAME="item" PATH="/*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#index.xhtml" NAME="output"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml" TITLE="home" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="adicionar::#adicionar.xhtml" NAME="output1"
+    PATH="/adicionar.xhtml" TARGET="rules:#adicionar.xhtml"
+    TITLE="adicionar" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="remover::#remover.xhtml" NAME="output2"
+    PATH="/remover.xhtml" TARGET="rules:#remover.xhtml" TITLE="remover" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editar::#editar.xhtml" NAME="output3"
+    PATH="/editar.xhtml" TARGET="rules:#editar.xhtml" TITLE="editar" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="Lista::#lista.xhtml" NAME="output4"
+    PATH="/lista.xhtml" TARGET="rules:#lista.xhtml" TITLE="Lista" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="adicionarTelefone::#adicionarTelefone.xhtml"
+    NAME="output5" PATH="/adicionarTelefone.xhtml"
+    TARGET="rules:#adicionarTelefone.xhtml" TITLE="adicionarTelefone" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="removerTelefone::#removerTelefone.xhtml"
+    NAME="output6" PATH="/removerTelefone.xhtml"
+    TARGET="rules:#removerTelefone.xhtml" TITLE="removerTelefone" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editarTelefone::#editarTelefone.xhtml"
+    NAME="output7" PATH="/editarTelefone.xhtml"
+    TARGET="rules:#editarTelefone.xhtml" TITLE="editarTelefone" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#adicionar.xhtml" PATH="/adicionar.xhtml"
+  SHAPE="288,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="288,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#remover.xhtml" PATH="/remover.xhtml"
+  SHAPE="288,353,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editar.xhtml" PATH="/editar.xhtml"
+  SHAPE="288,465,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#lista.xhtml" PATH="/lista.xhtml"
+  SHAPE="304,337,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editarTelefone.xhtml"
+  PATH="/editarTelefone.xhtml" SHAPE="304,369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#removerTelefone.xhtml"
+  PATH="/removerTelefone.xhtml" SHAPE="304,369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#adicionarTelefone.xhtml"
+  PATH="/adicionarTelefone.xhtml" SHAPE="304,369,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

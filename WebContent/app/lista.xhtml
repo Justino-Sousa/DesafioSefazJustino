@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lista de Usuarios</title>
+</h:head>
+
+<h:body>
+	<p:panel id="listaDeUsuarios" header="Lista de Usuarios"
+		style="width:1300px;height:600px">
+		
+		<h:messages globalOnly="true" />
+		
+		<p:dataTable value="#{usuarioController.usuarios}" var="usuario">
+
+			<p:column>
+				<f:facet name="header">Nome</f:facet>
+            #{usuario.nome}
+        </p:column>
+			<p:column>
+				<f:facet name="header">Email</f:facet>
+            #{usuario.email}
+        </p:column>
+
+			<p:column>
+				<f:facet name="header">Telefone</f:facet>
+				<h:form>
+
+					<p:linkButton outcome="listaTelefone" value="fones" icon="pi pi-mobile" style="margin-right:20px;" title="Visualizar lista de telefones do contato">
+						<f:param name="usuarioId" value="#{usuario.id}" />
+					</p:linkButton>
+
+				</h:form>
+			</p:column>
+
+			<p:column>
+
+
+				<p:button outcome="editar"  value="Editar" icon="pi pi-pencil" style="margin-right:90px;" title="Editar Contato">
+					<f:param name="usuario" value="#{usuario.id}" />
+				</p:button>
+
+			</p:column>
+			<p:column>
+				<p:button outcome="remover" value="remover" icon="pi pi-trash" 	style="margin-right:90px;" title="Remover Contato">
+					<f:param name="usuario" value="#{usuario.id}" />
+				</p:button>
+			</p:column>
+		</p:dataTable>
+	</p:panel>
+	<p:linkButton outcome="adicionar" icon="pi pi-user-plus" style="margin-right:20px;"></p:linkButton>
+	<p:linkButton outcome="home" value="voltar" style="margin-right:20px;"></p:linkButton>
+
+</h:body>
+
+</html>

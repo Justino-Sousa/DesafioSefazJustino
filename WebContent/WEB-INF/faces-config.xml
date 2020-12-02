@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<application>
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+		</locale-config>
+		<message-bundle>primeiroProjeto.wen.i18n.Messages</message-bundle>
+	</application>
+	
+	<navigation-rule>
+		<from-view-id>/*</from-view-id>
+		<navigation-case>
+			<from-outcome>home</from-outcome>
+			<to-view-id>app/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adicionar</from-outcome>
+			<to-view-id>app/adicionar.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>remover</from-outcome>
+			<to-view-id>app/remover.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editar</from-outcome>
+			<to-view-id>app/editar.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>Lista</from-outcome>
+			<to-view-id>app/lista.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adicionarTelefone</from-outcome>
+			<to-view-id>app/adicionarTelefone.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>removerTelefone</from-outcome>
+			<to-view-id>app/removerTelefone.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editarTelefone</from-outcome>
+			<to-view-id>app/editarTelefone.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

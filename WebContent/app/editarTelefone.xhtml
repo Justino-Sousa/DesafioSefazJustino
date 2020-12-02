@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Editar Telefone</title>
+
+	<f:metadata>
+		<f:viewParam name="telefoneId" value="#{usuarioController.telefone.id}" />
+		<f:event type="preRenderView" listener="#{usuarioController.selecionarTelefone()}" />	
+	</f:metadata>
+
+</h:head>
+
+<h:body>
+	<h:messages /><h:messages />
+
+	<h:form rendered="#{usuarioController.telefone.id !=0 }" style="width:800px;height:600px" >
+		<p:panel id="cadastroTelefone" header="Editar telefone">
+			<br/>
+					
+					<span class="ui-float-label"> 
+						<p:inputText id="inputDdd" value="#{usuarioController.telefone.ddd}" style="width:80px" required="true">
+							<f:validateLength minimum="2" maximum="3" />
+						</p:inputText>
+						<p:outputLabel for="@previous" value="DDD" />
+					</span>
+		
+					<br />
+		
+					<span class="ui-float-label">
+						 <p:inputText id="inputNumero" value="#{usuarioController.telefone.numero}" required="true"></p:inputText> 
+						 <p:outputLabel for="@previous" value="numero" />
+					</span>		
+					
+					<br/>
+		
+					<p:outputLabel for="tipo" value="Tipo:" />
+					
+					<p:selectOneRadio id="tipo"
+						value="#{usuarioController.telefone.tipo}" unselectable="true">
+						<f:selectItem itemLabel="Fixo" itemValue="Fixo" />
+						<f:selectItem itemLabel="movel" itemValue="Movel" />
+					</p:selectOneRadio>
+					
+					<h:message for="telefone" />
+					
+					<br/>				
+		
+		</p:panel>
+		<p:commandButton value="salvar" id="salvar" action="#{usuarioController.atualizarTelefone()}"  style="margin-right:20px" icon="pi pi-save" />
+		<p:linkButton outcome="lista" value="voltar" style="margin-right:20px"></p:linkButton>
+	</h:form>
+
+</h:body>
+</html>

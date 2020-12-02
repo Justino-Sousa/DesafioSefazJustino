@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Remover Telefone</title>
+	<f:metadata>
+		<f:viewParam name="usuario" value="#{usuarioController.usuario.id}" />
+		<f:event type="preRenderView" listener="#{usuarioController.selecionar()}" />
+	</f:metadata>
+</h:head>
+
+<h:body>
+	<p:panel id="login" header="Login" style="width:800px;height:400px" >
+		
+		<h5>
+			Deseja remover Esse Usuário?
+		
+		<h:outputText value="#{usuarioController.usuario.nome}" />
+		</h5>
+		<h:messages />
+		
+		<h:form rendered="#{usuarioController.usuario.id!= 0}">
+			<h:commandButton value="Confirmar" action="#{usuarioController.remover}" />
+		</h:form>
+		
+		</p:panel>
+		<p:linkButton outcome="lista" value="voltar" style="margin-right:20px;"></p:linkButton>
+</h:body>
+</html>

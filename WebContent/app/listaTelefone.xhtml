@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Telefones do usuário</title>
+
+	<f:metadata>
+		<f:viewParam name="usuarioId" value="#{usuarioController.usuario.id}" />
+		<f:event type="preRenderView" listener="#{usuarioController.selecionar()}" />
+	</f:metadata>
+</h:head>
+
+<h:body>
+	<p:panel id="listaDetelefones" header="Lista de Telefones de #{usuarioController.usuario.nome}" style="width:980px;height:600px">
+		
+		<h:messages globalOnly="true" />
+		
+		<p:dataTable value="#{usuarioController.usuario.telefones}"
+			var="telefone">
+			<p:column>
+				<f:facet name="header">DDD</f:facet>
+	            #{telefone.ddd}
+	       	</p:column>
+			<p:column>
+				<f:facet name="header">Numero</f:facet>
+	            #{telefone.numero}
+	        </p:column>
+	       	<p:column>
+				<f:facet name="header">Tipo</f:facet>
+	            #{telefone.tipo}
+	        </p:column>
+			<p:column>
+				<f:facet name="header">Editar</f:facet>
+				<p:button  icon="pi pi-pencil" outcome="editarTelefone" style="margin-right:90px;" title="Icon Only"> 
+					<f:param name="telefoneId" value="#{telefone.id}" />
+				</p:button>
+			</p:column>
+			<p:column>
+				<f:facet name="header">Excluir</f:facet>
+				<p:button  icon="pi pi-trash" style="margin-right:90px;" title="Icon Only"> 
+					<f:param name="productId" value="30" />
+				</p:button>
+			</p:column>
+
+		</p:dataTable>
+	</p:panel>
+	<p:linkButton outcome="adicionarTelefone" icon="pi pi-plus" style="margin-right:20px;">
+		<f:param name="usuario" value="#{usuarioController.usuario.id}" />
+	</p:linkButton>
+	<p:linkButton outcome="lista" value="voltar" style="margin-right:20px;"></p:linkButton>
+</h:body>
+
+</html>
